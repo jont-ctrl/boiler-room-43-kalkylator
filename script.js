@@ -56,7 +56,7 @@ while (calcActive) {
     }
   }
 
-  historyText.innerHTML += `Resultatet av ${num1} ${chosenOperator} ${num2} är ${result}<br>`;
+  historyText.innerHTML += `Resultatet av ${num1} ${chosenOperator} ${num2} är <strong>${result}</strong><br>`;
 
   calcActive = confirm('Vill du göra en ny beräkning?');
 }
