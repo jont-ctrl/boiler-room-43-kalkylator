@@ -1,4 +1,7 @@
 let calcActive = true;
+
+const historyText = document.querySelector('.historyTxt');
+
 while (calcActive) {
   let num1 = Number(prompt('Välj ett första tal'));
   let chosenOperator = prompt('välj en operation + - % / * ^');
@@ -52,5 +55,8 @@ while (calcActive) {
         console.log('Error, fel operation');
     }
   }
+
+  historyText.innerHTML += `Resultatet av ${num1} ${chosenOperator} ${num2} är ${result}<br>`;
+
   calcActive = confirm('Vill du göra en ny beräkning?');
 }
