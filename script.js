@@ -54,6 +54,7 @@ while (calcActive) {
         break;
       default:
         console.log('Error, fel operation');
+        alert('Error, fel operation');
     }
   }
 
