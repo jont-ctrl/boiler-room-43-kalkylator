@@ -7,8 +7,9 @@ while (calcActive) {
   let chosenOperator = prompt('välj en operation + - % / * ^');
   let num2 = Number(prompt('Vänligen ange ditt andra tal att räkna med'));
   let result = 0;
-  if (isNaN(num1) && isNaN(num2)) {
-    console.log('Error, välj ett nummer');
+  if (isNaN(num1) || isNaN(num2)) {
+    console.log('Error, måste skriva in ett nummer');
+    alert('Error, måste skriva in ett nummer');
   } else {
     switch (chosenOperator) {
       case '+':
@@ -27,12 +28,12 @@ while (calcActive) {
         alert('Resultatet av modulus är ' + result);
         break;
       case '/':
-        /*
-            num2 === 0 ? alert('Det går inte att dela med 0') : console.log(num1 / num2)
-            result = (num1 / num2)
-            alert('Resultatet av din division är '+result)
-            break; */
-        if (num2 === 0) {
+        num2 === 0
+          ? alert('Det går inte att dela med 0')
+          : ((result = num1 / num2),
+            alert('Resultatet av din division är ' + result));
+        break;
+      /*         if (num2 === 0) {
           alert('Det går inte att dela med 0');
           break;
         } else {
@@ -40,7 +41,7 @@ while (calcActive) {
           result = num1 / num2;
           alert('Resultatet av din division är ' + result);
           break;
-        }
+        } */
       case '*':
         console.log(num1 * num2);
         result = num1 * num2;
